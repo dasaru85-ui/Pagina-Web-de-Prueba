@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oro Negro | Joyería fina en Perú</title>
+<meta name="description" content="Joyería Oro Negro: anillos de compromiso, aros de matrimonio y joyería personalizada en oro y plata. Envíos a todo el Perú.">
+<style>
+  :root {
+    --primario: #C9A227;
+    --primario-oscuro: #8C6D1F;
+    --acento: #E5C558;
+    --fondo-oscuro: #121212;
+    --fondo-alterno: #F7F5EF;
+    --texto: #1F2937;
+    --radio: 14px;
+    --serif: Georgia, 'Times New Roman', serif;
+    --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--texto);
+    background: #fff;
+    line-height: 1.5;
+  }
+  img, svg { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--acento);
+    color: var(--fondo-oscuro);
+    padding: 10px 16px;
+    z-index: 2000;
+    border-radius: 0 0 8px 0;
+    font-weight: 700;
+  }
+  .skip-link:focus {
+    left: 0;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  button { font-family: inherit; cursor: pointer; }
+
+  /* ===== 1. Barra superior de utilidades ===== */
+  .top-bar {
+    background: var(--fondo-oscuro);
+    color: #E7E1D0;
+    font-size: 0.82rem;
+  }
+  .top-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 38px;
+  }
+  .top-bar-links {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0; padding: 0;
+  }
+  .top-bar-links a {
+    text-decoration: none;
+    color: #E7E1D0;
+    padding: 4px 2px;
+  }
+  .top-bar-links a:hover,
+  .top-bar-links a:focus-visible {
+    color: var(--acento);
+  }
+  .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .top-bar-phone {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: #E7E1D0;
+  }
+  .top-bar-phone svg { width: 14px; height: 14px; }
+  .btn-pill {
+    background: var(--primario);
+    color: var(--fondo-oscuro);
+    border: none;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-pill:hover, .btn-pill:focus-visible { background: var(--acento); }
+
+  @media (max-width: 768px) {
+    .top-bar-links { display: none; }
+  }
+
+  /* ===== 2. Header principal ===== */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    transition: box-shadow .2s ease;
+  }
+  .site-header.scrolled {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 74px;
+    gap: 20px;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--fondo-oscuro);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .logo svg { width: 28px; height: 28px; flex-shrink: 0; }
+  .logo span.negro { color: var(--primario-oscuro); }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    justify-content: center;
+  }
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; padding: 0;
+    gap: 4px;
+  }
+  .main-nav > ul > li {
+    position: relative;
+  }
+  .nav-link {
+    background: none;
+    border: none;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--texto);
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+  }
+  .nav-link:hover, .nav-link:focus-visible {
+    background: var(--fondo-alterno);
+    color: var(--primario-oscuro);
+  }
+  .mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    border-radius: var(--radio);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+    padding: 22px;
+    min-width: 320px;
+    display: none;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid #eee;
+  }
+  .main-nav > ul > li.open .mega-menu {
+    display: grid;
+  }
+  .mega-menu h3 {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--primario-oscuro);
+    margin: 0 0 10px;
+  }
+  .mega-menu ul {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .mega-menu a {
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 0.9rem;
+    padding: 6px 8px;
+    border-radius: 6px;
+    display: block;
+  }
+  .mega-menu a:hover, .mega-menu a:focus-visible {
+    background: var(--fondo-alterno);
+    color: var(--primario-oscuro);
+  }
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .btn-primary {
+    background: var(--primario);
+    color: var(--fondo-oscuro);
+    border: none;
+    border-radius: 999px;
+    padding: 11px 22px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    text-decoration: none;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .btn-primary:hover, .btn-primary:focus-visible { background: var(--acento); }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+  .hamburger span {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background: var(--fondo-oscuro);
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  .hamburger span:nth-child(1) { top: 13px; }
+  .hamburger span:nth-child(2) { top: 20px; }
+  .hamburger span:nth-child(3) { top: 27px; }
+  .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  @media (max-width: 1100px) {
+    .main-nav { display: none; }
+    .hamburger { display: block; }
+    .header-cta .btn-primary { display: none; }
+  }
+
+  /* Mobile accordion menu */
+  .mobile-nav {
+    display: none;
+    background: #fff;
+    border-top: 1px solid #eee;
+  }
+  .mobile-nav.open { display: block; }
+  .mobile-nav ul { list-style: none; margin: 0; padding: 8px 0; }
+  .mobile-nav > ul > li { border-bottom: 1px solid #f0f0f0; }
+  .accordion-btn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accordion-btn .chevron { transition: transform .2s ease; }
+  .accordion-btn[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+  .accordion-panel {
+    display: none;
+    padding: 0 20px 14px 32px;
+  }
+  .accordion-panel.open { display: block; }
+  .accordion-panel a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 0.92rem;
+  }
+  .mobile-nav .plain-link {
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 600;
+  }
+  .mobile-nav .mobile-cta {
+    margin: 14px 20px;
+  }
+
+  /* ===== 3. Hero carrusel ===== */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--fondo-oscuro);
+    color: #fff;
+  }
+  .hero-track {
+    display: flex;
+    transition: transform .6s ease;
+  }
+  .hero-slide {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 460px;
+    position: relative;
+    padding: 60px 0;
+  }
+  .hero-slide.slide-1 {
+    background: linear-gradient(120deg, #0c0c0c 0%, #1b1608 45%, var(--primario-oscuro) 100%);
+  }
+  .hero-slide.slide-2 {
+    background: linear-gradient(120deg, #14100a 0%, #4a3a12 55%, var(--primario) 100%);
+  }
+  .hero-slide.slide-3 {
+    background: linear-gradient(135deg, #050505 0%, #2b2210 50%, var(--acento) 120%);
+  }
+  .hero-decor {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+    height: 340px;
+    opacity: 0.9;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 560px;
+    padding: 0 20px;
+  }
+  .hero .container { position: relative; }
+  .hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    color: var(--acento);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .hero-title {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    margin: 0 0 14px;
+    line-height: 1.15;
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: #DCD6C4;
+    margin: 0 0 26px;
+  }
+  .hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+  }
+  .hero-arrow:hover, .hero-arrow:focus-visible { background: var(--primario); border-color: var(--primario); }
+  .hero-arrow.prev { left: 16px; }
+  .hero-arrow.next { right: 16px; }
+  .hero-arrow svg { width: 20px; height: 20px; }
+
+  .hero-dots {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 3;
+  }
+  .hero-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.4);
+    padding: 0;
+  }
+  .hero-dot[aria-current="true"] {
+    background: var(--acento);
+    width: 26px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-slide { min-height: 400px; padding: 40px 0 60px; }
+    .hero-title { font-size: 1.7rem; }
+    .hero-decor { width: 200px; height: 200px; right: -60px; opacity: 0.6; }
+  }
+
+  /* ===== 4. Accesos rápidos ===== */
+  .section { padding: 64px 0; }
+  .section-alt { background: var(--fondo-alterno); }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    text-align: center;
+    margin: 0 0 8px;
+    color: var(--fondo-oscuro);
+  }
+  .section-subtitle {
+    text-align: center;
+    color: #555;
+    margin: 0 0 36px;
+  }
+  .quick-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .quick-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: var(--radio);
+    padding: 26px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--texto);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .quick-card:hover, .quick-card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+    border-color: var(--primario);
+  }
+  .quick-icon {
+    width: 52px; height: 52px;
+    margin: 0 auto 14px;
+    background: var(--fondo-alterno);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .quick-icon svg { width: 26px; height: 26px; color: var(--primario-oscuro); }
+  .quick-card h3 { font-size: 1rem; margin: 0; }
+
+  @media (max-width: 1100px) {
+    .quick-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .quick-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== 5. Productos destacados ===== */
+  .product-block {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 60px;
+  }
+  .product-block:last-child { margin-bottom: 0; }
+  .product-block.reverse { flex-direction: row-reverse; }
+  .product-media {
+    flex: 1;
+    aspect-ratio: 4/3;
+    border-radius: var(--radio);
+    overflow: hidden;
+  }
+  .product-media.grad-1 { background: linear-gradient(135deg, #1b1608, var(--primario-oscuro), var(--acento)); }
+  .product-media.grad-2 { background: linear-gradient(135deg, var(--fondo-oscuro), #3a2f10, var(--primario)); }
+  .product-media.grad-3 { background: linear-gradient(135deg, #0c0c0c, var(--primario), #fff6d8); }
+  .product-text { flex: 1; }
+  .product-text h3 {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    margin: 0 0 12px;
+  }
+  .product-text p { color: #444; margin: 0 0 18px; }
+  .product-benefits {
+    list-style: none;
+    margin: 0 0 22px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .product-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.94rem;
+  }
+  .product-benefits svg { width: 18px; height: 18px; color: var(--primario-oscuro); flex-shrink: 0; }
+  .btn-outline {
+    display: inline-block;
+    border: 2px solid var(--primario-oscuro);
+    color: var(--primario-oscuro);
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+  .btn-outline:hover, .btn-outline:focus-visible {
+    background: var(--primario-oscuro);
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .product-block, .product-block.reverse { flex-direction: column; gap: 24px; }
+  }
+
+  /* ===== 6. Beneficios / promociones ===== */
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .benefit-card {
+    background: var(--fondo-oscuro);
+    color: #fff;
+    border-radius: var(--radio);
+    padding: 26px 22px;
+  }
+  .benefit-card svg { width: 30px; height: 30px; color: var(--acento); margin-bottom: 14px; }
+  .benefit-card h3 { font-size: 1.02rem; margin: 0 0 8px; }
+  .benefit-card p { font-size: 0.88rem; color: #C9C4B2; margin: 0; }
+
+  @media (max-width: 1100px) {
+    .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .benefits-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== 7. Contenido educativo ===== */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .edu-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: var(--radio);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+  }
+  .edu-card:hover, .edu-card:focus-visible { box-shadow: 0 10px 24px rgba(0,0,0,0.1); }
+  .edu-media {
+    height: 140px;
+  }
+  .edu-media.g1 { background: linear-gradient(120deg, var(--primario-oscuro), var(--acento)); }
+  .edu-media.g2 { background: linear-gradient(120deg, var(--fondo-oscuro), var(--primario)); }
+  .edu-media.g3 { background: linear-gradient(120deg, #3a2f10, var(--acento), #fff6d8); }
+  .edu-body { padding: 20px; flex: 1; }
+  .edu-body span {
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    color: var(--primario-oscuro);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .edu-body h3 { margin: 8px 0; font-size: 1.06rem; }
+  .edu-body p { margin: 0; color: #555; font-size: 0.9rem; }
+
+  @media (max-width: 768px) {
+    .edu-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== 8. Canales de atención ===== */
+  .channels-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .channel-card {
+    text-align: center;
+    padding: 28px 18px;
+    border-radius: var(--radio);
+    background: var(--fondo-alterno);
+  }
+  .channel-icon {
+    width: 54px; height: 54px;
+    border-radius: 50%;
+    background: var(--fondo-oscuro);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px;
+  }
+  .channel-icon svg { width: 26px; height: 26px; color: var(--acento); }
+  .channel-card h3 { margin: 0 0 6px; font-size: 1rem; }
+  .channel-card p { margin: 0; color: #555; font-size: 0.88rem; }
+
+  @media (max-width: 1100px) {
+    .channels-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .channels-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== 9. Footer ===== */
+  .site-footer {
+    background: var(--fondo-oscuro);
+    color: #C9C4B2;
+    padding: 56px 0 0;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(4, 1fr);
+    gap: 32px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #2c2c2c;
+  }
+  .footer-brand .logo { color: #fff; margin-bottom: 12px; }
+  .footer-brand p { font-size: 0.88rem; line-height: 1.6; max-width: 260px; }
+  .footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .footer-social a {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: #1e1e1e;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+  }
+  .footer-social svg { width: 16px; height: 16px; color: #C9C4B2; }
+  .footer-social a:hover, .footer-social a:focus-visible { background: var(--primario-oscuro); }
+  .footer-col h4 {
+    color: #fff;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin: 0 0 16px;
+  }
+  .footer-col ul { list-style: none; margin: 0; padding: 0; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a {
+    text-decoration: none;
+    color: #C9C4B2;
+    font-size: 0.9rem;
+  }
+  .footer-col a:hover, .footer-col a:focus-visible { color: var(--acento); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px 0 28px;
+    font-size: 0.8rem;
+    color: #8f8b7c;
+  }
+
+  @media (max-width: 1100px) {
+    .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ===== 10. Botón flotante WhatsApp ===== */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    z-index: 900;
+  }
+  .whatsapp-float:hover, .whatsapp-float:focus-visible { background: #1ebe5b; }
+  .whatsapp-float svg { width: 30px; height: 30px; color: #fff; }
+
+  @media (max-width: 768px) {
+    .whatsapp-float { bottom: 84px; right: 16px; width: 52px; height: 52px; }
+    .whatsapp-float svg { width: 26px; height: 26px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+<!-- 1. Barra superior de utilidades -->
+<div class="top-bar">
+  <div class="container">
+    <ul class="top-bar-links">
+      <li><a href="#destacados-mujer">Mujer</a></li>
+      <li><a href="#destacados-hombre">Hombre</a></li>
+      <li><a href="#matrimonio">Matrimonio</a></li>
+    </ul>
+    <div class="top-bar-right">
+      <a class="top-bar-phone" href="tel:+51987654321">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (01) 987 654 321
+      </a>
+      <a class="btn-pill" href="#mi-cuenta">Mi cuenta</a>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Header principal -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#contenido-principal" class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l4 5H8l4-5zM3 9h18l-9 13L3 9z"/></svg>
+      ORO <span class="negro">NEGRO</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true">Anillos</button>
+          <div class="mega-menu">
+            <div>
+              <h3>Anillos</h3>
+              <ul>
+                <li><a href="#anillos-compromiso">Anillos de compromiso</a></li>
+                <li><a href="#anillos-oro">Anillos de oro 18k</a></li>
+                <li><a href="#anillos-plata">Anillos de plata 950</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Ayuda rápida</h3>
+              <ul>
+                <li><a href="#guia-tallas">Guía de tallas</a></li>
+                <li><a href="#cotiza">Cotiza tu joya</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true">Aros de matrimonio</button>
+          <div class="mega-menu">
+            <div>
+              <h3>Aros de matrimonio</h3>
+              <ul>
+                <li><a href="#aros-clasicos">Clásicos</a></li>
+                <li><a href="#aros-grabado">Con grabado gratis</a></li>
+                <li><a href="#aros-duo">Set de pareja</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Servicios</h3>
+              <ul>
+                <li><a href="#agendar-cita">Agendar cita en tienda</a></li>
+                <li><a href="#garantia">Garantía de por vida</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true">Cadenas y pulseras</button>
+          <div class="mega-menu">
+            <div>
+              <h3>Cadenas</h3>
+              <ul>
+                <li><a href="#cadenas-oro">Cadenas de oro</a></li>
+                <li><a href="#cadenas-plata">Cadenas de plata</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Pulseras</h3>
+              <ul>
+                <li><a href="#pulseras-clasicas">Clásicas</a></li>
+                <li><a href="#pulseras-personalizadas">Personalizadas</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true">Aretes</button>
+          <div class="mega-menu">
+            <div>
+              <h3>Aretes</h3>
+              <ul>
+                <li><a href="#aretes-oro">Aretes de oro</a></li>
+                <li><a href="#aretes-perlas">Con perlas</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Colecciones</h3>
+              <ul>
+                <li><a href="#coleccion-temporada">Colección de temporada</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true">Personalizados</button>
+          <div class="mega-menu">
+            <div>
+              <h3>Joyería personalizada</h3>
+              <ul>
+                <li><a href="#personalizado-disenos">Diseños a medida</a></li>
+                <li><a href="#personalizado-grabado">Grabado personalizado</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Proceso</h3>
+              <ul>
+                <li><a href="#personalizado-cotiza">Cotiza tu joya</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true">Ayuda</button>
+          <div class="mega-menu">
+            <div>
+              <h3>Ayuda</h3>
+              <ul>
+                <li><a href="#canales-atencion">Canales de atención</a></li>
+                <li><a href="#guia-tallas">Guía de tallas</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="#libro-reclamaciones">Libro de reclamaciones</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a class="btn-primary" href="#cotiza">Cotiza tu joya</a>
+      <button class="hamburger" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile accordion menu -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
+    <ul>
+      <li>
+        <button class="accordion-btn" aria-expanded="false">Anillos <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="accordion-panel">
+          <a href="#anillos-compromiso">Anillos de compromiso</a>
+          <a href="#anillos-oro">Anillos de oro 18k</a>
+          <a href="#anillos-plata">Anillos de plata 950</a>
+        </div>
+      </li>
+      <li>
+        <button class="accordion-btn" aria-expanded="false">Aros de matrimonio <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="accordion-panel">
+          <a href="#aros-clasicos">Clásicos</a>
+          <a href="#aros-grabado">Con grabado gratis</a>
+          <a href="#aros-duo">Set de pareja</a>
+        </div>
+      </li>
+      <li>
+        <button class="accordion-btn" aria-expanded="false">Cadenas y pulseras <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="accordion-panel">
+          <a href="#cadenas-oro">Cadenas de oro</a>
+          <a href="#pulseras-clasicas">Pulseras clásicas</a>
+        </div>
+      </li>
+      <li>
+        <button class="accordion-btn" aria-expanded="false">Aretes <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="accordion-panel">
+          <a href="#aretes-oro">Aretes de oro</a>
+          <a href="#aretes-perlas">Con perlas</a>
+        </div>
+      </li>
+      <li>
+        <button class="accordion-btn" aria-expanded="false">Personalizados <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="accordion-panel">
+          <a href="#personalizado-disenos">Diseños a medida</a>
+          <a href="#personalizado-grabado">Grabado personalizado</a>
+        </div>
+      </li>
+      <li>
+        <button class="accordion-btn" aria-expanded="false">Ayuda <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="accordion-panel">
+          <a href="#canales-atencion">Canales de atención</a>
+          <a href="#libro-reclamaciones">Libro de reclamaciones</a>
+        </div>
+      </li>
+    </ul>
+    <a class="btn-primary mobile-cta" href="#cotiza">Cotiza tu joya</a>
+  </nav>
+</header>
+
+<main id="contenido-principal">
+
+  <!-- 3. Hero con carrusel -->
+  <section class="hero" aria-roledescription="carrusel" aria-label="Destacados">
+    <div class="hero-track" id="hero-track">
+      <div class="hero-slide slide-1" role="group" aria-roledescription="slide" aria-label="1 de 3">
+        <svg class="hero-decor" viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="90" stroke="#E5C558" stroke-width="1" opacity="0.4"/><path d="M100 40 L130 100 L100 160 L70 100 Z" stroke="#E5C558" stroke-width="1.5" opacity="0.7"/></svg>
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-eyebrow">Colección destacada</p>
+            <h1 class="hero-title">Piezas en oro y plata para cada historia</h1>
+            <p class="hero-desc">Descubre anillos, cadenas y aretes elaborados con piedras seleccionadas y acabados de alta joyería.</p>
+            <a class="btn-primary" href="#destacados">Ver colección</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide slide-2" role="group" aria-roledescription="slide" aria-label="2 de 3">
+        <svg class="hero-decor" viewBox="0 0 200 200" fill="none"><circle cx="70" cy="70" r="50" stroke="#121212" stroke-width="6" opacity="0.5"/><circle cx="130" cy="120" r="50" stroke="#121212" stroke-width="6" opacity="0.5"/></svg>
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-eyebrow">Aros de matrimonio</p>
+            <h1 class="hero-title">Grabado gratuito en tus aros de matrimonio</h1>
+            <p class="hero-desc">Elige entre nuestros modelos clásicos y personaliza el interior con el mensaje que quieras.</p>
+            <a class="btn-primary" href="#aros-grabado">Conocer más</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide slide-3" role="group" aria-roledescription="slide" aria-label="3 de 3">
+        <svg class="hero-decor" viewBox="0 0 200 200" fill="none"><path d="M40 100h120M100 40v120" stroke="#fff" stroke-width="1" opacity="0.35"/><circle cx="100" cy="100" r="34" stroke="#fff" stroke-width="1.5" opacity="0.6"/></svg>
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-eyebrow">Campaña de temporada</p>
+            <h1 class="hero-title">Diseña tu joya personalizada esta temporada</h1>
+            <p class="hero-desc">Trabajamos contigo de la mano de nuestros joyeros para crear una pieza única.</p>
+            <a class="btn-primary" href="#personalizado-cotiza">Cotizar ahora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="hero-arrow prev" id="hero-prev" aria-label="Slide anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="hero-arrow next" id="hero-next" aria-label="Slide siguiente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Seleccionar slide">
+      <button class="hero-dot" aria-current="true" aria-label="Ir al slide 1" data-slide="0"></button>
+      <button class="hero-dot" aria-label="Ir al slide 2" data-slide="1"></button>
+      <button class="hero-dot" aria-label="Ir al slide 3" data-slide="2"></button>
+    </div>
+  </section>
+
+  <!-- 4. Accesos rápidos -->
+  <section class="section" id="accesos-rapidos" aria-labelledby="accesos-titulo">
+    <div class="container">
+      <h2 class="section-title" id="accesos-titulo">¿Qué estás buscando hoy?</h2>
+      <p class="section-subtitle">Accede directo a lo que necesitas</p>
+      <div class="quick-grid">
+        <a class="quick-card" href="#anillos-compromiso">
+          <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 5H9l3-5zM4 9h16l-8 13L4 9z"/></svg></div>
+          <h3>Ver anillos de compromiso</h3>
+        </a>
+        <a class="quick-card" href="#personalizado-cotiza">
+          <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h3>Cotizar una joya personalizada</h3>
+        </a>
+        <a class="quick-card" href="#guia-tallas">
+          <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Encontrar mi talla de anillo</h3>
+        </a>
+        <a class="quick-card" href="#agendar-cita">
+          <div class="quick-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></div>
+          <h3>Agendar cita en tienda</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Productos destacados -->
+  <section class="section section-alt" id="destacados" aria-labelledby="destacados-titulo">
+    <div class="container">
+      <h2 class="section-title" id="destacados-titulo">Productos destacados</h2>
+      <p class="section-subtitle">Nuestras líneas más elegidas por nuestros clientes</p>
+
+      <div class="product-block" id="aros-grabado">
+        <div class="product-media grad-1" role="img" aria-label="Ilustración decorativa de aros de matrimonio en tonos dorados"></div>
+        <div class="product-text">
+          <h3>Aros de matrimonio</h3>
+          <p>Modelos clásicos y modernos en oro 18k, pensados para acompañar tu compromiso durante toda la vida.</p>
+          <ul class="product-benefits">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Oro 18k certificado</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Grabado incluido sin costo</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Garantía de por vida</li>
+          </ul>
+          <a class="btn-outline" href="#cotiza">Ver modelos</a>
+        </div>
+      </div>
+
+      <div class="product-block reverse" id="anillos-compromiso">
+        <div class="product-media grad-2" role="img" aria-label="Ilustración decorativa de anillo de compromiso"></div>
+        <div class="product-text">
+          <h3>Anillos de compromiso</h3>
+          <p>Diseños con piedras preciosas seleccionadas, engarces seguros y opciones a la medida de tu presupuesto.</p>
+          <ul class="product-benefits">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Piedras certificadas</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Ajuste de talla gratuito</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Estuche de regalo incluido</li>
+          </ul>
+          <a class="btn-outline" href="#guia-tallas">Ver colección</a>
+        </div>
+      </div>
+
+      <div class="product-block" id="personalizado-disenos">
+        <div class="product-media grad-3" role="img" aria-label="Ilustración decorativa de joyería personalizada"></div>
+        <div class="product-text">
+          <h3>Línea personalizada</h3>
+          <p>Trabajamos junto a ti para crear una pieza única, desde el boceto hasta el acabado final.</p>
+          <ul class="product-benefits">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Asesoría con joyero experto</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Boceto 3D antes de fabricar</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Materiales a elección</li>
+          </ul>
+          <a class="btn-outline" href="#personalizado-cotiza">Cotiza tu joya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Beneficios / promociones -->
+  <section class="section" id="beneficios" aria-labelledby="beneficios-titulo">
+    <div class="container">
+      <h2 class="section-title" id="beneficios-titulo">Beneficios y promociones</h2>
+      <p class="section-subtitle">Comprar en Oro Negro tiene sus ventajas</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.26L21 9.27l-4.5 4.39L17.8 21 12 17.77 6.2 21l1.3-7.34L3 9.27l6.1-1.01L12 2z"/></svg>
+          <h3>Descuento de temporada</h3>
+          <p>Hasta 20% en piezas seleccionadas de la colección actual.</p>
+        </div>
+        <div class="benefit-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+          <h3>Pago en cuotas</h3>
+          <p>Financia tu joya hasta en 12 cuotas sin intereses con tarjetas participantes.</p>
+        </div>
+        <div class="benefit-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l2-7h14l2 7M3 12v6a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-6M3 12h18"/></svg>
+          <h3>Envío asegurado</h3>
+          <p>Entregas con seguro incluido a todo el Perú.</p>
+        </div>
+        <div class="benefit-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4v6h6M20 20v-6h-6M5.5 9A7 7 0 0 1 19 9M18.5 15a7 7 0 0 1-13.5 0"/></svg>
+          <h3>Cambio de talla gratis</h3>
+          <p>Primer ajuste de talla sin costo durante los primeros 60 días.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Contenido educativo -->
+  <section class="section section-alt" id="educativo" aria-labelledby="educativo-titulo">
+    <div class="container">
+      <h2 class="section-title" id="educativo-titulo">Aprende sobre joyería</h2>
+      <p class="section-subtitle">Contenido para elegir mejor tu próxima pieza</p>
+      <div class="edu-grid">
+        <a class="edu-card" href="#guia-oro" id="guia-oro">
+          <div class="edu-media g1"></div>
+          <div class="edu-body">
+            <span>Guía</span>
+            <h3>¿Oro 18k o 14k?</h3>
+            <p>Te explicamos las diferencias de pureza, durabilidad y precio entre ambas aleaciones.</p>
+          </div>
+        </a>
+        <a class="edu-card" href="#guia-anillo">
+          <div class="edu-media g2"></div>
+          <div class="edu-body">
+            <span>Guía</span>
+            <h3>Cómo elegir tu anillo de compromiso</h3>
+            <p>Consejos sobre corte, talla y presupuesto para acertar en un momento único.</p>
+          </div>
+        </a>
+        <a class="edu-card" href="#guia-tallas" id="guia-tallas">
+          <div class="edu-media g3"></div>
+          <div class="edu-body">
+            <span>Guía</span>
+            <h3>Guía de tallas</h3>
+            <p>Aprende a medir tu talla de anillo desde casa en simples pasos.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Canales de atención -->
+  <section class="section" id="canales-atencion" aria-labelledby="canales-titulo">
+    <div class="container">
+      <h2 class="section-title" id="canales-titulo">Canales de atención</h2>
+      <p class="section-subtitle">Estamos para ayudarte antes, durante y después de tu compra</p>
+      <div class="channels-grid">
+        <div class="channel-card">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/></svg></div>
+          <h3>Tienda física</h3>
+          <p>Av. Ejemplo 123, San Isidro, Lima<br>[Horario: lunes a sábado, 10am–8pm]</p>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5A8.5 8.5 0 1 1 21 11.5z"/></svg></div>
+          <h3>WhatsApp</h3>
+          <p>Escríbenos y te respondemos en minutos.</p>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <h3>Teléfono</h3>
+          <p>(01) 987 654 321</p>
+        </div>
+        <div class="channel-card">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></div>
+          <h3>Redes sociales</h3>
+          <p>Síguenos en Instagram para novedades y colecciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 9. Footer institucional -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#contenido-principal" class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l4 5H8l4-5zM3 9h18l-9 13L3 9z"/></svg>
+          ORO NEGRO
+        </a>
+        <p>Joyería fina en oro y plata, con piezas clásicas y personalizadas para cada historia.</p>
+        <div class="footer-social">
+          <a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="#facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#tiktok" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#anillos-compromiso">Anillos de compromiso</a></li>
+          <li><a href="#aros-grabado">Aros de matrimonio</a></li>
+          <li><a href="#cadenas-oro">Cadenas y pulseras</a></li>
+          <li><a href="#aretes-oro">Aretes</a></li>
+          <li><a href="#personalizado-disenos">Personalizados</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ayuda</h4>
+        <ul>
+          <li><a href="#guia-tallas">Guía de tallas</a></li>
+          <li><a href="#canales-atencion">Canales de atención</a></li>
+          <li><a href="#agendar-cita">Agendar una cita</a></li>
+          <li><a href="#cotiza">Cotiza tu joya</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Nosotros</h4>
+        <ul>
+          <li><a href="#historia">Nuestra historia</a></li>
+          <li><a href="#tiendas">Nuestras tiendas</a></li>
+          <li><a href="#trabaja-con-nosotros">Trabaja con nosotros</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#terminos">Términos y condiciones</a></li>
+          <li><a href="#privacidad">Política de privacidad</a></li>
+          <li><a href="#libro-reclamaciones" id="libro-reclamaciones">Libro de reclamaciones</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Oro Negro. Todos los derechos reservados. RUC: [___________]</span>
+      <span>Hecho con dedicación en Perú</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 10. Botón flotante de WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me/51987654321" target="_blank" rel="noopener noreferrer" aria-label="Abrir chat de WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.76.46 3.45 1.33 4.94L2 22l5.2-1.36a9.96 9.96 0 0 0 4.84 1.23h.01c5.52 0 10-4.48 10-10s-4.48-9.87-10.01-9.87zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.09.81.83-3.01-.2-.31a8.17 8.17 0 0 1-1.26-4.36c0-4.52 3.68-8.2 8.21-8.2 2.19 0 4.25.86 5.8 2.4a8.15 8.15 0 0 1 2.4 5.8c0 4.53-3.68 8.19-8.2 8.19zm4.5-6.13c-.25-.12-1.46-.72-1.68-.8-.23-.08-.39-.12-.56.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.16 0-.43.06-.65.31-.23.25-.85.83-.85 2.02 0 1.19.87 2.34 1 2.5.12.16 1.7 2.61 4.13 3.65.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.46-.6 1.66-1.17.21-.58.21-1.07.14-1.17-.06-.11-.22-.17-.47-.29z"/></svg>
+</a>
+
+<script>
+(function () {
+  'use strict';
+
+  // ---- Header sombra al hacer scroll ----
+  var header = document.getElementById('site-header');
+  function onScroll() {
+    if (window.scrollY > 8) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ---- Mega-menú desktop ----
+  var navItems = Array.prototype.slice.call(document.querySelectorAll('.main-nav > ul > li'));
+  function closeAllMegaMenus() {
+    navItems.forEach(function (li) {
+      li.classList.remove('open');
+      var btn = li.querySelector('.nav-link');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+  navItems.forEach(function (li) {
+    var btn = li.querySelector('.nav-link');
+    btn.addEventListener('click', function () {
+      var isOpen = li.classList.contains('open');
+      closeAllMegaMenus();
+      if (!isOpen) {
+        li.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.main-nav')) {
+      closeAllMegaMenus();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeAllMegaMenus();
+    }
+  });
+
+  // ---- Menú móvil (hamburguesa + acordeón) ----
+  var hamburger = document.getElementById('hamburger-btn');
+  var mobileNav = document.getElementById('mobile-nav');
+  hamburger.addEventListener('click', function () {
+    var isOpen = mobileNav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  var accordionBtns = Array.prototype.slice.call(document.querySelectorAll('.accordion-btn'));
+  accordionBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.nextElementSibling;
+      var isOpen = panel.classList.contains('open');
+      accordionBtns.forEach(function (b) {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        panel.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      mobileNav.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // ---- Hero carrusel ----
+  var track = document.getElementById('hero-track');
+  var slides = Array.prototype.slice.call(track.children);
+  var dots = Array.prototype.slice.call(document.querySelectorAll('.hero-dot'));
+  var prevBtn = document.getElementById('hero-prev');
+  var nextBtn = document.getElementById('hero-next');
+  var heroSection = document.querySelector('.hero');
+  var current = 0;
+  var total = slides.length;
+  var autoplayId = null;
+  var AUTOPLAY_MS = 5000;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach(function (d, i) {
+      d.setAttribute('aria-current', i === current ? 'true' : 'false');
+    });
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayId = setInterval(next, AUTOPLAY_MS);
+  }
+  function stopAutoplay() {
+    if (autoplayId) {
+      clearInterval(autoplayId);
+      autoplayId = null;
+    }
+  }
+
+  nextBtn.addEventListener('click', function () { next(); startAutoplay(); });
+  prevBtn.addEventListener('click', function () { prev(); startAutoplay(); });
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { goTo(i); startAutoplay(); });
+  });
+
+  heroSection.addEventListener('mouseenter', stopAutoplay);
+  heroSection.addEventListener('mouseleave', startAutoplay);
+  heroSection.addEventListener('focusin', stopAutoplay);
+  heroSection.addEventListener('focusout', startAutoplay);
+
+  goTo(0);
+  startAutoplay();
+})();
+</script>
+</body>
+</html>
